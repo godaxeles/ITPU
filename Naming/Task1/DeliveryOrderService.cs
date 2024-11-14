@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Naming.Task1.ThirdParty;
+﻿using Naming.Task1.ThirdParty;
 
 namespace Naming.Task1
 {
