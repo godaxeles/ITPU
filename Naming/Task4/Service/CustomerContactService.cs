@@ -4,21 +4,21 @@ namespace Naming.Task4.Service
 {
     public class CustomerContactService : ICustomerContactService
     {
-        private readonly ICustomerContactRepository customerContactRepository;
+        private readonly ICustomerContactRepository _customerContactRepository;
 
         public CustomerContactService(ICustomerContactRepository customerContactRepository)
         {
-            this.customerContactRepository = customerContactRepository;
+            _customerContactRepository = customerContactRepository;
         }
 
-        public CustomerContact FindCustomerContactDetailsByCustomerId(float customerId)
+        public CustomerContact Find(float customerId)
         {
-            return customerContactRepository.FindById(customerId);
+            return _customerContactRepository.FindById(customerId);
         }
 
-        public void UpdateCustomerContactDetails(CustomerContact customerContactDetails)
+        public void Update(CustomerContact customerContactDetails)
         {
-            customerContactRepository.Update(customerContactDetails);
+            _customerContactRepository.Update(customerContactDetails);
         }
     }
 }

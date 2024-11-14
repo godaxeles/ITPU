@@ -3,7 +3,7 @@
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp2.0</TargetFramework>
-        <StartupObject>Naming.Task3.H</StartupObject>
+        <StartupObject>Naming.Task3.Harshad</StartupObject>
     </PropertyGroup>
 
     <ItemGroup>

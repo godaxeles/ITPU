@@ -12,17 +12,17 @@ namespace Naming.Task6
 
         public static void Main(string[] args)
         {
-            Console.WriteLine(FormatKyeValue("enable", "true"));
-            Console.WriteLine(FormatKyeValue("name", "Bob"));
+            Console.WriteLine(FormatKeyValue("enable", "true"));
+            Console.WriteLine(FormatKeyValue("name", "Bob"));
 
             Console.Write("Press key...");
             Console.ReadKey();
         }
 
-        private static string FormatKyeValue(string key, string value)
+        private static string FormatKeyValue(string key, string value)
         {
-            string content = key + Underscore + value;
-            string minuses = Repeat(Minus, content.Length);
+            var content = key + Underscore + value;
+            var minuses = Repeat(Minus, content.Length);
             return Plus + minuses + Plus + "\n" +
                    Pipe + content + Pipe + "\n" +
                    Plus + minuses + Plus + "\n";

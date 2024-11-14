@@ -37,13 +37,13 @@ namespace Naming.Task5
 
         private static bool IsInValidImage(string fileName)
         {
-            var imageExtensionsPredicate = new FileExtPred(TYPES);
+            var imageExtensionsPredicate = new FileExtension(TYPES);
             return !imageExtensionsPredicate.Test(fileName);
         }
 
         private static bool IsInValidDocument(string fileName)
         {
-            var documentExtensionsPredicate = new FileExtPred(TYPES2);
+            var documentExtensionsPredicate = new FileExtension(TYPES2);
             return !documentExtensionsPredicate.Test(fileName);
         }
 
@@ -61,7 +61,7 @@ namespace Naming.Task5
 
         private List<string> Files(string[] allowedExtensions)
         {
-            var pred = new FileExtPred(allowedExtensions);
+            var pred = new FileExtension(allowedExtensions);
             return fp.GetDirectoryContents(string.Empty)
                 .Select(f => f.Name)
                 .Where(pred.Test)
